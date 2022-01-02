@@ -6,26 +6,25 @@
 /*   By: vintran <vintran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/02 17:01:32 by vintran           #+#    #+#             */
-/*   Updated: 2022/01/02 17:11:33 by vintran          ###   ########.fr       */
+/*   Updated: 2022/01/02 18:23:13 by vintran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie::Zombie(void)
+Zombie::Zombie(std::string const name) : _name(name) 
 {
-	std::cout << "constructor Zombie" << std::endl;
 	return ;
 }
 
 Zombie::~Zombie(void)
 {
-	std::cout << "destructor Zombie" << std::endl;
+	std::cout << "Zombie " << _name << " died" << std::endl;
 	return ;
 }
 
-void	Zombie::announce(void) const
+void	Zombie::announce(void)
 {
-	std::cout << "<" << this->name << "> BraiiiiiiinnnzzzZ..." << std::endl;
+	std::cout << _name << " BraiiiiiiinnnzzzZ..." << std::endl;
 	return ;
 }

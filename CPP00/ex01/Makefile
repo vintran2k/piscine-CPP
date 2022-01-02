@@ -6,14 +6,14 @@
 #    By: vintran <vintran@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/01 21:51:29 by vintran           #+#    #+#              #
-#    Updated: 2022/01/01 23:25:12 by vintran          ###   ########.fr        #
+#    Updated: 2022/01/02 17:16:59 by vintran          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME			=	phonebook
 SRCS			=	main.cpp				\
-					phonebook.class.cpp		\
-					contact.class.cpp
+					Phonebook.cpp		\
+					Contact.cpp
 CC				=	@clang++
 FLAGS			=	-Wall -Wextra -Werror -std=c++98
 OBJDIR			=	objs

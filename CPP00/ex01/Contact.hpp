@@ -1,34 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vintran <vintran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/01 22:11:20 by vintran           #+#    #+#             */
-/*   Updated: 2022/01/02 17:18:01 by vintran          ###   ########.fr       */
+/*   Created: 2022/01/02 17:17:06 by vintran           #+#    #+#             */
+/*   Updated: 2022/01/02 17:17:17 by vintran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Phonebook.hpp"
+#ifndef CONTACT_H
+# define CONTACT_H
 
-int	main()
+#include <iostream>
+#include <iomanip>
+
+class	Contact
 {
-	std::string		input;
-	Phonebook		book;
+	public :
+		Contact(void);
+		~Contact(void);
+		void	add(void);
+		void	display1(int index);
+		void	display2(void);
 
-	while (!std::cin.eof())
-	{
-		book.prompt();
-		getline(std::cin, input);
-		if (input == "EXIT")
-			break ;
-		else if (input == "ADD")
-			book.add();
-		else if (input == "SEARCH")
-			book.search();
-		else if (!input.empty())
-			std::cout << "Error: invalid command" << std::endl;
-	}
-	return (0);
-}
+	private :
+		enum type
+		{
+			firstname,
+			lastname,
+			nickname,
+			phonenumber,
+			secret
+		};
+		std::string infos[5];
+};
+
+#endif

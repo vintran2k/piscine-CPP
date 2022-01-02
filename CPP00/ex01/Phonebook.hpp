@@ -1,34 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Phonebook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vintran <vintran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/01 22:11:20 by vintran           #+#    #+#             */
-/*   Updated: 2022/01/02 17:18:01 by vintran          ###   ########.fr       */
+/*   Created: 2022/01/02 17:17:25 by vintran           #+#    #+#             */
+/*   Updated: 2022/01/02 17:17:43 by vintran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Phonebook.hpp"
+#ifndef PHONEBOOK_H
+# define PHONEBOOK_H
 
-int	main()
+#include "Contact.hpp"
+#include <cstdlib>
+
+class	Phonebook
 {
-	std::string		input;
-	Phonebook		book;
+	public :
+		Phonebook(void);
+		~Phonebook(void);
+		void	prompt(void);
+		void	add(void);
+		void	search(void);
 
-	while (!std::cin.eof())
-	{
-		book.prompt();
-		getline(std::cin, input);
-		if (input == "EXIT")
-			break ;
-		else if (input == "ADD")
-			book.add();
-		else if (input == "SEARCH")
-			book.search();
-		else if (!input.empty())
-			std::cout << "Error: invalid command" << std::endl;
-	}
-	return (0);
-}
+	private :
+		Contact contacts[8];
+		int		n;
+		void	display(void);
+};
+
+#endif

@@ -6,7 +6,7 @@
 /*   By: vintran <vintran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/02 17:17:06 by vintran           #+#    #+#             */
-/*   Updated: 2022/01/02 17:17:17 by vintran          ###   ########.fr       */
+/*   Updated: 2022/01/02 17:18:36 by vintran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ class	Contact
 			phonenumber,
 			secret
 		};
-		std::string infos[5];
+		std::string _infos[5];
 };
 
 #endif

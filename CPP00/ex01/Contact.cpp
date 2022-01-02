@@ -6,7 +6,7 @@
 /*   By: vintran <vintran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/01 23:05:09 by vintran           #+#    #+#             */
-/*   Updated: 2022/01/02 17:18:26 by vintran          ###   ########.fr       */
+/*   Updated: 2022/01/02 17:19:10 by vintran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,15 +25,15 @@ Contact::~Contact(void)
 void	Contact::add(void)
 {
 	std::cout << "first name: ";
-	std::cin >> this->infos[firstname];
+	std::cin >> this->_infos[firstname];
 	std::cout << "last name: ";
-	std::cin >> this->infos[lastname];
+	std::cin >> this->_infos[lastname];
 	std::cout << "nickname: ";
-	std::cin >> this->infos[nickname];
+	std::cin >> this->_infos[nickname];
 	std::cout << "phone_number: ";
-	std::cin >> this->infos[phonenumber];
+	std::cin >> this->_infos[phonenumber];
 	std::cout << "darkest_secret: ";
-	std::cin >> this->infos[secret];
+	std::cin >> this->_infos[secret];
 	std::cin.ignore();
 	return ;
 }
@@ -54,9 +54,9 @@ void	resize_and_print(std::string str)
 void	Contact::display1(int index)
 {
 	std::cout << std::setw(10) << index  << "|";
-	resize_and_print(this->infos[firstname]);
-	resize_and_print(this->infos[lastname]);
-	resize_and_print(this->infos[nickname]);
+	resize_and_print(this->_infos[firstname]);
+	resize_and_print(this->_infos[lastname]);
+	resize_and_print(this->_infos[nickname]);
 	std::cout << std::endl;
 	return ;
 }
@@ -64,9 +64,9 @@ void	Contact::display1(int index)
 void	Contact::display2(void)
 {
 	std::cout	<< std::endl
-				<< "First Name:       " << this->infos[firstname] << std::endl
-				<< "Last Name:        " << this->infos[lastname] << std::endl
-				<< "Nickname:         " << this->infos[nickname] << std::endl
-				<< "Phone Number:     " << this->infos[phonenumber] << std::endl
-				<< "Darkest secret:   " << this->infos[secret] << std::endl << std::endl;
+				<< "First Name:       " << this->_infos[firstname] << std::endl
+				<< "Last Name:        " << this->_infos[lastname] << std::endl
+				<< "Nickname:         " << this->_infos[nickname] << std::endl
+				<< "Phone Number:     " << this->_infos[phonenumber] << std::endl
+				<< "Darkest secret:   " << this->_infos[secret] << std::endl << std::endl;
 }

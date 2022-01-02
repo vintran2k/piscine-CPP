@@ -6,8 +6,20 @@
 /*   By: vintran <vintran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/02 16:57:26 by vintran           #+#    #+#             */
-/*   Updated: 2022/01/02 16:57:33 by vintran          ###   ########.fr       */
+/*   Updated: 2022/01/02 17:13:21 by vintran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int main()
+#include "Zombie.hpp"
+
+Zombie*	newZombie(std::string name)
+{
+	
+}
+
+int main(void)
+{
+	Zombie zombie;
+
+	return (0);
+}

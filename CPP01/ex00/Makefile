@@ -6,12 +6,13 @@
 #    By: vintran <vintran@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/02 16:55:59 by vintran           #+#    #+#              #
-#    Updated: 2022/01/02 16:56:30 by vintran          ###   ########.fr        #
+#    Updated: 2022/01/02 17:07:11 by vintran          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME			=	zombie
-SRCS			=	main.cpp
+SRCS			=	main.cpp		\
+					Zombie.cpp
 CC				=	@clang++
 FLAGS			=	-Wall -Wextra -Werror -std=c++98
 OBJDIR			=	objs

@@ -1,34 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Phonebook.hpp                                      :+:      :+:    :+:   */
+/*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vintran <vintran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/02 17:17:25 by vintran           #+#    #+#             */
-/*   Updated: 2022/01/02 17:18:25 by vintran          ###   ########.fr       */
+/*   Created: 2022/01/02 17:01:32 by vintran           #+#    #+#             */
+/*   Updated: 2022/01/02 17:11:33 by vintran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_H
-# define PHONEBOOK_H
+#include "Zombie.hpp"
 
-#include "Contact.hpp"
-#include <cstdlib>
-
-class	Phonebook
+Zombie::Zombie(void)
 {
-	public :
-		Phonebook(void);
-		~Phonebook(void);
-		void	prompt(void);
-		void	add(void);
-		void	search(void);
+	std::cout << "constructor Zombie" << std::endl;
+	return ;
+}
 
-	private :
-		Contact _contacts[8];
-		int		_n;
-		void	_display(void);
-};
+Zombie::~Zombie(void)
+{
+	std::cout << "destructor Zombie" << std::endl;
+	return ;
+}
 
-#endif
+void	Zombie::announce(void) const
+{
+	std::cout << "<" << this->name << "> BraiiiiiiinnnzzzZ..." << std::endl;
+	return ;
+}

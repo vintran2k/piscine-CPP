@@ -1,34 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Phonebook.hpp                                      :+:      :+:    :+:   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vintran <vintran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/02 17:17:25 by vintran           #+#    #+#             */
-/*   Updated: 2022/01/02 17:18:25 by vintran          ###   ########.fr       */
+/*   Created: 2022/01/02 17:00:56 by vintran           #+#    #+#             */
+/*   Updated: 2022/01/02 17:11:46 by vintran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_H
-# define PHONEBOOK_H
+#ifndef ZOMBIE_H
+# define ZOMBIE_H
 
-#include "Contact.hpp"
-#include <cstdlib>
+#include <iostream>
 
-class	Phonebook
+class	Zombie
 {
-	public :
-		Phonebook(void);
-		~Phonebook(void);
-		void	prompt(void);
-		void	add(void);
-		void	search(void);
+	public:
+		Zombie(void);
+		~Zombie(void);
 
-	private :
-		Contact _contacts[8];
-		int		_n;
-		void	_display(void);
+	private:
+		std::string const name;
+		void	announce(void) const;
 };
 
 #endif

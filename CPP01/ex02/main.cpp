@@ -5,21 +5,24 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: vintran <vintran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/02 16:57:26 by vintran           #+#    #+#             */
-/*   Updated: 2022/01/03 14:52:44 by vintran          ###   ########.fr       */
+/*   Created: 2022/01/03 15:40:23 by vintran           #+#    #+#             */
+/*   Updated: 2022/01/03 16:00:40 by vintran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include <iostream>
 
-int main(void)
+int	main(void)
 {
-	Zombie	on_stack("stack");
-	Zombie	*on_heap = newZombie("heap");
+	std::string		string = "HI THIS IS BRAIN";
+	std::string*	stringPTR = &string;
+	std::string&	stringREF = string;
+	
+	std::cout	<< &string << std::endl
+				<< stringPTR << std::endl
+				<< &stringREF << std::endl;
 
-	on_stack.announce();
-	on_heap->announce();
-	randomChump("stack2");
-	delete on_heap;
+	std::cout	<< *stringPTR << std::endl
+				<< stringREF << std::endl;
 	return (0);
 }

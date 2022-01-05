@@ -1,25 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Karen.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vintran <vintran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/02 16:57:26 by vintran           #+#    #+#             */
-/*   Updated: 2022/01/03 14:52:44 by vintran          ###   ########.fr       */
+/*   Created: 2022/01/04 19:58:59 by vintran           #+#    #+#             */
+/*   Updated: 2022/01/04 20:33:10 by vintran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef KAREN_H
+# define KAREN_H
 
-int main(void)
+# include <iostream>
+
+class	Karen
 {
-	Zombie	on_stack("stack");
-	Zombie	*on_heap = newZombie("heap");
+	public:
+		Karen(void);
+		~Karen(void);
+		void	complain(std::string level);
+	
+	private:
+		void		_debug(void);
+		void		_info(void);
+		void		_warning(void);
+		void		_error(void);
+		std::string	_levels[4];
+		void		(Karen::*_f[4])(void);
+};
 
-	on_stack.announce();
-	on_heap->announce();
-	randomChump("stack2");
-	delete on_heap;
-	return (0);
-}
+#endif

@@ -1,25 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   HumanA.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vintran <vintran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/02 16:57:26 by vintran           #+#    #+#             */
-/*   Updated: 2022/01/03 14:52:44 by vintran          ###   ########.fr       */
+/*   Created: 2022/01/03 16:27:42 by vintran           #+#    #+#             */
+/*   Updated: 2022/01/03 17:30:49 by vintran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "HumanA.hpp"
 
-int main(void)
+HumanA::HumanA(std::string const name, Weapon const& weapon) : _name(name), _weapon(weapon)
 {
-	Zombie	on_stack("stack");
-	Zombie	*on_heap = newZombie("heap");
+	return ;
+}
 
-	on_stack.announce();
-	on_heap->announce();
-	randomChump("stack2");
-	delete on_heap;
-	return (0);
+HumanA::~HumanA(void)
+{
+	std::cout << _name << " died" << std::endl;
+	return ;
+}
+
+void	HumanA::attack(void) const
+{
+	std::cout << _name << " attacks with his " << _weapon.getType() << std::endl;
 }

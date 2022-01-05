@@ -1,25 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vintran <vintran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/02 16:57:26 by vintran           #+#    #+#             */
-/*   Updated: 2022/01/03 14:52:44 by vintran          ###   ########.fr       */
+/*   Created: 2022/01/02 17:01:32 by vintran           #+#    #+#             */
+/*   Updated: 2022/01/03 15:23:11 by vintran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-int main(void)
+Zombie::Zombie(void) 
 {
-	Zombie	on_stack("stack");
-	Zombie	*on_heap = newZombie("heap");
+	return ;
+}
 
-	on_stack.announce();
-	on_heap->announce();
-	randomChump("stack2");
-	delete on_heap;
-	return (0);
+Zombie::~Zombie(void)
+{
+	std::cout << "Zombie " << _name << " died" << std::endl;
+	return ;
+}
+
+void	Zombie::announce(void)
+{
+	std::cout << _name << " BraiiiiiiinnnzzzZ..." << std::endl;
+	return ;
+}
+
+void	Zombie::setName(std::string name)
+{
+	_name = name;
+	return ;
 }

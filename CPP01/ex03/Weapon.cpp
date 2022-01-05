@@ -1,25 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Weapon.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vintran <vintran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/02 16:57:26 by vintran           #+#    #+#             */
-/*   Updated: 2022/01/03 14:52:44 by vintran          ###   ########.fr       */
+/*   Created: 2022/01/03 16:03:49 by vintran           #+#    #+#             */
+/*   Updated: 2022/01/03 16:53:22 by vintran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Weapon.hpp"
 
-int main(void)
+Weapon::Weapon(std::string const type) : _type(type)
 {
-	Zombie	on_stack("stack");
-	Zombie	*on_heap = newZombie("heap");
+	return ;
+}
 
-	on_stack.announce();
-	on_heap->announce();
-	randomChump("stack2");
-	delete on_heap;
-	return (0);
+Weapon::~Weapon(void)
+{
+	return ;
+}
+
+std::string const &		Weapon::getType(void) const
+{
+	return (_type);
+}
+
+void	Weapon::setType(std::string type)
+{
+	_type = type;
+	return ;
 }

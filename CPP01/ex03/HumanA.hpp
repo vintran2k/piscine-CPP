@@ -1,25 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   HumanA.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vintran <vintran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/02 16:57:26 by vintran           #+#    #+#             */
-/*   Updated: 2022/01/03 14:52:44 by vintran          ###   ########.fr       */
+/*   Created: 2022/01/03 16:27:29 by vintran           #+#    #+#             */
+/*   Updated: 2022/01/03 17:30:53 by vintran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef HUMANA_H
+# define HUMANA_H
 
-int main(void)
+#include "Weapon.hpp"
+
+class	HumanA
 {
-	Zombie	on_stack("stack");
-	Zombie	*on_heap = newZombie("heap");
+	public:
+		HumanA(std::string const name, Weapon const& weapon);
+		~HumanA(void);
+		void	attack(void) const;
 
-	on_stack.announce();
-	on_heap->announce();
-	randomChump("stack2");
-	delete on_heap;
-	return (0);
-}
+	private:
+		std::string const	_name;
+		Weapon const&		_weapon;
+};
+
+#endif

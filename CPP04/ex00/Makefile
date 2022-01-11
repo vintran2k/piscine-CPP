@@ -6,16 +6,17 @@
 #    By: vintran <vintran@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/05 13:56:33 by vintran           #+#    #+#              #
-#    Updated: 2022/01/06 10:34:04 by vintran          ###   ########.fr        #
+#    Updated: 2022/01/11 15:19:46 by vintran          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME			=	DiamondTrap
-SRCS			=	main.cpp			\
-					ClapTrap.cpp		\
-					ScavTrap.cpp		\
-					FragTrap.cpp		\
-					DiamondTrap.cpp
+NAME			=	polymorphism
+SRCS			=	main.cpp		\
+					Animal.cpp		\
+					Dog.cpp			\
+					Cat.cpp			\
+					WrongAnimal.cpp	\
+					WrongCat.cpp
 CC				=	@clang++
 FLAGS			=	-Wall -Wextra -Werror -std=c++98
 OBJDIR			=	objs

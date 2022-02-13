@@ -6,13 +6,13 @@
 #    By: vintran <vintran@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/05 13:56:33 by vintran           #+#    #+#              #
-#    Updated: 2022/02/02 10:42:05 by vintran          ###   ########.fr        #
+#    Updated: 2022/02/13 16:06:11 by vintran          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME			=	fixed
-SRCS			=	main.cpp		\
-					Fixed.cpp
+SRCS			=	main.cpp	\
+					Fixed.cpp		
 CC				=	@clang++
 FLAGS			=	-Wall -Wextra -Werror -std=c++98
 OBJDIR			=	objs

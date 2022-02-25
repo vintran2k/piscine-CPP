@@ -6,7 +6,7 @@
 /*   By: vintran <vintran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 07:55:31 by vintran           #+#    #+#             */
-/*   Updated: 2022/01/06 08:59:10 by vintran          ###   ########.fr       */
+/*   Updated: 2022/02/25 18:53:06 by vintran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,13 @@ ScavTrap::ScavTrap(std::string name)
 	return ;
 }
 
+ScavTrap::ScavTrap(ScavTrap const & src)
+{
+	std::cout << "Another " << src._name << " is spawn!" <<  std::endl;
+	*this = src;
+	return ;
+}
+
 ScavTrap::~ScavTrap(void)
 {
 	std::cout << "ScavTrap " << this->_name << " died!" << std::endl;
@@ -51,8 +58,16 @@ ScavTrap &		ScavTrap::operator=(ScavTrap const & rhs)
 
 void	ScavTrap::attack(std::string const & target)
 {
+	if (this->_hitPoints < 1)
+		return ;
+	if (this->_energyPoints < 1)
+	{
+		std::cout << "ScavTrap " << this->_name << " has no energy points left !" << std::endl;
+		return ;
+	}
 	std::cout	<< "ScavTrap " << this->_name << " attacks " << target
 				<< ", causing " << this->_attackDamage << " points of damage!" << std::endl;
+	this->_energyPoints--;
 	return ;
 }
 

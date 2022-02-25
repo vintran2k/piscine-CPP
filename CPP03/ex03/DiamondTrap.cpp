@@ -6,7 +6,7 @@
 /*   By: vintran <vintran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 09:32:35 by vintran           #+#    #+#             */
-/*   Updated: 2022/01/06 10:15:35 by vintran          ###   ########.fr       */
+/*   Updated: 2022/02/25 19:06:37 by vintran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ DiamondTrap::DiamondTrap(void)
 	std::cout << "A stranger DiamondTrap spawn!" << std::endl;
     ClapTrap::_name = "_clap_name";
 	_hitPoints = FragTrap::_hitPoints;
-	_energyPoints = ScavTrap::_hitPoints;
+	_energyPoints = ScavTrap::_energyPoints;
 	_attackDamage = FragTrap::_attackDamage;
 	return ;
 }
@@ -27,8 +27,15 @@ DiamondTrap::DiamondTrap(std::string name) : _name(name)
 	std::cout << "DiamondTrap " << name << " spawn!" << std::endl;
 	ClapTrap::_name = this->_name + "_clap_name";
 	_hitPoints = FragTrap::_hitPoints;
-	_energyPoints = ScavTrap::_hitPoints;
+	_energyPoints = ScavTrap::_energyPoints;
 	_attackDamage = FragTrap::_attackDamage;
+	return ;
+}
+
+DiamondTrap::DiamondTrap(DiamondTrap const & src)
+{
+	std::cout << "Another " << src._name << " is spawn!" <<  std::endl;
+	*this = src;
 	return ;
 }
 

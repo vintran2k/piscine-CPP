@@ -6,7 +6,7 @@
 /*   By: vintran <vintran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/05 20:11:17 by vintran           #+#    #+#             */
-/*   Updated: 2022/01/06 07:39:29 by vintran          ###   ########.fr       */
+/*   Updated: 2022/02/25 17:21:03 by vintran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,13 +77,26 @@ ClapTrap &		ClapTrap::operator=(ClapTrap const & rhs)
 
 void		ClapTrap::attack(std::string const & target)
 {
+	if (this->_hitPoints < 1)
+		return ;
+	if (this->_energyPoints < 1)
+	{
+		std::cout << "ClapTrap " << this->_name << " has no energy points left !" << std::endl;
+		return ;
+	}
 	std::cout	<< "ClapTrap " << _name << " attacks " << target
 				<< ", causing " << _attackDamage << " points of damage!" << std::endl;
+	this->_energyPoints--;
 	return ;
 }
 
 void		ClapTrap::takeDamage(unsigned int amount)
 {
+	if (this->_hitPoints < 1)
+	{
+		std::cout << "ClapTrap " << this->_name << " is already KO !" << std::endl;
+		return ;
+	}
 	if (amount >= this->_hitPoints)
 	{
 		std::cout << "ClapTrap " << this->_name << " is KO!" << std::endl;
@@ -98,10 +111,20 @@ void		ClapTrap::takeDamage(unsigned int amount)
 
 void		ClapTrap::beRepaired(unsigned int amount)
 {
+	if (this->_hitPoints < 1)
+		return ;
+	if (this->_energyPoints < 1)
+	{
+		std::cout << "ClapTrap " << this->_name << " has no energy points left !" << std::endl;
+		return ;
+	}
 	if (this->_hitPoints == 100)
 		return ;
 	if (this->_hitPoints + amount > 100)
 		amount = 100 - this->_hitPoints;
 	std::cout << amount << " hit points have been added to Claptrap " << this->_name << "!" << std::endl;
 	this->_hitPoints += amount;
+	this->_energyPoints--;
+	return ;
 }
+

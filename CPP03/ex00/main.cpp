@@ -6,7 +6,7 @@
 /*   By: vintran <vintran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/05 18:43:21 by vintran           #+#    #+#             */
-/*   Updated: 2022/01/06 07:49:59 by vintran          ###   ########.fr       */
+/*   Updated: 2022/02/25 17:19:16 by vintran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,10 +45,11 @@ int	main()
 
 	Bob.attack("Ray");
 	Ray.takeDamage(Bob.getAttackDamage());
-	Ray.attack("Bob");
-	Bob.takeDamage(Ray.getAttackDamage());
-	Ray.attack("Bob");
-	Bob.takeDamage(Ray.getAttackDamage());
+	for (int i = 0; i < 10; i++)
+	{
+		Ray.attack("Bob");
+		Bob.takeDamage(Ray.getAttackDamage());
+	}
 
 	std::cout << std::endl;
 

@@ -6,7 +6,7 @@
 /*   By: vintran <vintran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 08:53:38 by vintran           #+#    #+#             */
-/*   Updated: 2022/01/06 09:36:23 by vintran          ###   ########.fr       */
+/*   Updated: 2022/02/25 18:59:50 by vintran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,13 @@ FragTrap::FragTrap(std::string name)
 	return ;
 }
 
+FragTrap::FragTrap(FragTrap const & src)
+{
+	std::cout << "Another " << src._name << " is spawn!" <<  std::endl;
+	*this = src;
+	return ;
+}
+
 FragTrap::~FragTrap(void)
 {
 	std::cout << "FragTrap " << this->_name << " died!" << std::endl;
@@ -51,13 +58,21 @@ FragTrap &		FragTrap::operator=(FragTrap const & rhs)
 
 void	FragTrap::attack(std::string const & target)
 {
+	if (this->_hitPoints < 1)
+		return ;
+	if (this->_energyPoints < 1)
+	{
+		std::cout << "FragTrap " << this->_name << " has no energy points left !" << std::endl;
+		return ;
+	}
 	std::cout	<< "FragTrap " << this->_name << " attacks " << target
 				<< ", causing " << this->_attackDamage << " points of damage!" << std::endl;
+	this->_energyPoints--;
 	return ;
 }
 
 void	FragTrap::highFivesGuys(void)
 {
-	std::cout << this->_name << " says high fives Guys!" << std::endl;
+	std::cout << this->_name << " asks for High fives!" << std::endl;
 	return ;
 }

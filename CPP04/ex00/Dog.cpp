@@ -6,7 +6,7 @@
 /*   By: vintran <vintran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/11 13:50:33 by vintran           #+#    #+#             */
-/*   Updated: 2022/01/11 17:03:34 by vintran          ###   ########.fr       */
+/*   Updated: 2022/03/01 14:13:11 by vintran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ Dog::Dog(void)
 	return ;
 }
 
-Dog::Dog(Dog const & src)
+Dog::Dog(Dog const & src) : Animal()
 {
 	std::cout << "Dog copy class created" << std::endl;
 	*this = src;

@@ -6,7 +6,7 @@
 /*   By: vintran <vintran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 14:32:58 by vintran           #+#    #+#             */
-/*   Updated: 2022/01/14 14:59:18 by vintran          ###   ########.fr       */
+/*   Updated: 2022/03/01 18:51:27 by vintran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,6 @@ int	main(void)
 	
 	std::cout << std::endl;
 
-	
 	
 	std::cout << "cat brain: " << std::endl;
 	static_cast<Cat *>(cat)->getBrain().printIdeas();

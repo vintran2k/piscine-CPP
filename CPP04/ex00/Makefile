@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: vintran <vintran@student.42.fr>            +#+  +:+       +#+         #
+#    By: admin <admin@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/05 13:56:33 by vintran           #+#    #+#              #
-#    Updated: 2022/01/11 15:19:46 by vintran          ###   ########.fr        #
+#    Updated: 2022/03/01 14:09:28 by admin            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ SRCS			=	main.cpp		\
 					Cat.cpp			\
 					WrongAnimal.cpp	\
 					WrongCat.cpp
-CC				=	@clang++
+CC				=	@c++
 FLAGS			=	-Wall -Wextra -Werror -std=c++98
 OBJDIR			=	objs
 OBJS			=	$(addprefix $(OBJDIR)/, $(SRCS:.cpp=.o))

@@ -6,7 +6,7 @@
 /*   By: vintran <vintran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/11 15:20:50 by vintran           #+#    #+#             */
-/*   Updated: 2022/01/11 15:20:51 by vintran          ###   ########.fr       */
+/*   Updated: 2022/03/01 14:14:11 by vintran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ WrongCat::WrongCat(void)
 	return ;
 }
 
-WrongCat::WrongCat(WrongCat const & src)
+WrongCat::WrongCat(WrongCat const & src) : WrongAnimal()
 {
 	std::cout << "WrongCat copy class created" << std::endl;
 	*this = src;

@@ -6,7 +6,7 @@
 /*   By: vintran <vintran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/15 17:24:19 by vintran           #+#    #+#             */
-/*   Updated: 2022/01/17 16:15:24 by vintran          ###   ########.fr       */
+/*   Updated: 2022/03/01 18:52:59 by vintran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Cure::Cure(void)
 	return ;
 }
 
-Cure::Cure(Cure const & src)
+Cure::Cure(Cure const & src) : AMateria()
 {
 	*this = src;
 	return ;

@@ -6,7 +6,7 @@
 /*   By: vintran <vintran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/14 23:22:14 by vintran           #+#    #+#             */
-/*   Updated: 2022/01/17 16:14:47 by vintran          ###   ########.fr       */
+/*   Updated: 2022/03/01 18:52:43 by vintran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Ice::Ice(void)
 	return ;
 }
 
-Ice::Ice(Ice const & src)
+Ice::Ice(Ice const & src) : AMateria()
 {
 	*this = src;
 	return ;

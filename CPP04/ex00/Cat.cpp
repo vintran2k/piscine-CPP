@@ -6,7 +6,7 @@
 /*   By: vintran <vintran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/11 13:50:41 by vintran           #+#    #+#             */
-/*   Updated: 2022/01/11 17:03:29 by vintran          ###   ########.fr       */
+/*   Updated: 2022/03/01 14:12:57 by vintran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ Cat::Cat(void)
 	return ;
 }
 
-Cat::Cat(Cat const & src)
+Cat::Cat(Cat const & src) : Animal()
 {
 	std::cout << "Cat copy class created" << std::endl;
 	*this = src;

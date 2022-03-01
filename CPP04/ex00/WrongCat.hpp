@@ -6,7 +6,7 @@
 /*   By: vintran <vintran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/11 15:20:46 by vintran           #+#    #+#             */
-/*   Updated: 2022/01/11 15:20:47 by vintran          ###   ########.fr       */
+/*   Updated: 2022/03/01 14:13:41 by vintran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,4 +25,4 @@ class		WrongCat : public WrongAnimal
 		void			makeSound(void);
 };
 
-#endif //WRONGCAT_HPP
+#endif

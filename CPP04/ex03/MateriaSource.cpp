@@ -6,7 +6,7 @@
 /*   By: vintran <vintran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/14 22:59:18 by vintran           #+#    #+#             */
-/*   Updated: 2022/01/17 16:14:26 by vintran          ###   ########.fr       */
+/*   Updated: 2022/03/02 17:30:34 by vintran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ void		MateriaSource::learnMateria(AMateria *toLearn)
 
 AMateria *	MateriaSource::createMateria(std::string const & type)
 {
-	if (type != "ice" && type != "cure")	// useless
+	if (type != "ice" && type != "cure")
 		return (NULL);
 	for (int i = 0; i < 4; i++)
 	{

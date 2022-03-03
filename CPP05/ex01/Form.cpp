@@ -6,7 +6,7 @@
 /*   By: vintran <vintran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 06:33:13 by vintran           #+#    #+#             */
-/*   Updated: 2022/01/18 07:59:50 by vintran          ###   ########.fr       */
+/*   Updated: 2022/03/03 14:23:54 by vintran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,9 +58,9 @@ unsigned int		Form::getExecGrade(void) const
 
 Form &	Form::operator=(Form const & rhs)
 {
-	//if (this != &rhs)
+	if (this != &rhs)
+		this->_signed = rhs._signed;
 		//	const values
-	(void) rhs;
 	return (*this);
 }
 

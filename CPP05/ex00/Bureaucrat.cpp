@@ -6,7 +6,7 @@
 /*   By: vintran <vintran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/17 22:15:30 by vintran           #+#    #+#             */
-/*   Updated: 2022/01/18 06:28:58 by vintran          ###   ########.fr       */
+/*   Updated: 2022/03/03 14:07:07 by vintran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,16 @@ Bureaucrat::Bureaucrat(void)
 
 Bureaucrat::Bureaucrat(std::string name, unsigned int grade) : _name(name), _grade(grade)
 {
+	if (this->_grade > 150)
+	{
+		this->_grade = 150;
+		throw Bureaucrat::GradeTooLowException();
+	}
+	if (this->_grade < 1)
+	{
+		this->_grade = 1;
+		throw Bureaucrat::GradeTooHighException();
+	}
 	return ;
 }
 

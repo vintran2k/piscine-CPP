@@ -6,7 +6,7 @@
 #    By: vintran <vintran@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/05 13:56:33 by vintran           #+#    #+#              #
-#    Updated: 2022/01/18 13:04:56 by vintran          ###   ########.fr        #
+#    Updated: 2022/03/03 10:51:54 by vintran          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ SRCS			=	main.cpp					\
 					ShrubberyCreationForm.cpp	\
 					RobotomyRequestForm.cpp		\
 					PresidentialPardonForm.cpp
-CC				=	@clang++
+CC				=	@c++
 FLAGS			=	-Wall -Wextra -Werror -std=c++98
 OBJDIR			=	objs
 OBJS			=	$(addprefix $(OBJDIR)/, $(SRCS:.cpp=.o))

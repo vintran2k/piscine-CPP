@@ -6,7 +6,7 @@
 #    By: vintran <vintran@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/05 13:56:33 by vintran           #+#    #+#              #
-#    Updated: 2022/01/18 07:42:44 by vintran          ###   ########.fr        #
+#    Updated: 2022/03/03 10:51:47 by vintran          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME			=	form
 SRCS			=	main.cpp		\
 					Bureaucrat.cpp	\
 					Form.cpp
-CC				=	@clang++
+CC				=	@c++
 FLAGS			=	-Wall -Wextra -Werror -std=c++98
 OBJDIR			=	objs
 OBJS			=	$(addprefix $(OBJDIR)/, $(SRCS:.cpp=.o))

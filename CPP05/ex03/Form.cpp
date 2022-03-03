@@ -6,7 +6,7 @@
 /*   By: vintran <vintran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 06:33:13 by vintran           #+#    #+#             */
-/*   Updated: 2022/01/18 12:17:34 by vintran          ###   ########.fr       */
+/*   Updated: 2022/03/03 14:57:17 by vintran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,10 @@ std::string const	Form::getTarget(void) const
 Form &	Form::operator=(Form const & rhs)
 {
 	if (this != &rhs)
+	{
+		this->_signed = rhs._signed;
 		this->_target = rhs.getTarget();
+	}
 	return (*this);
 }
 

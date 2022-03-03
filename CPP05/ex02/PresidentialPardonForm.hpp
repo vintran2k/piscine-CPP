@@ -6,7 +6,7 @@
 /*   By: vintran <vintran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 12:57:28 by vintran           #+#    #+#             */
-/*   Updated: 2022/01/18 12:57:30 by vintran          ###   ########.fr       */
+/*   Updated: 2022/03/03 14:49:03 by vintran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class		PresidentialPardonForm : public Form
 		virtual ~PresidentialPardonForm(void);
 		PresidentialPardonForm &		operator=(PresidentialPardonForm const & rhs);
 
-		virtual bool				execute(Bureaucrat const & executor) const;
+		bool				execute(Bureaucrat const & executor) const;
 };
 
 #endif

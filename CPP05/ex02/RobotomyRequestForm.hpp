@@ -6,7 +6,7 @@
 /*   By: vintran <vintran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 12:22:51 by vintran           #+#    #+#             */
-/*   Updated: 2022/01/18 12:23:49 by vintran          ###   ########.fr       */
+/*   Updated: 2022/03/03 14:49:00 by vintran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class		RobotomyRequestForm : public Form
 		virtual ~RobotomyRequestForm(void);
 		RobotomyRequestForm &		operator=(RobotomyRequestForm const & rhs);
 
-		virtual bool				execute(Bureaucrat const & executor) const;
+		bool				execute(Bureaucrat const & executor) const;
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: vintran <vintran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 09:38:07 by vintran           #+#    #+#             */
-/*   Updated: 2022/01/18 12:16:17 by vintran          ###   ########.fr       */
+/*   Updated: 2022/03/03 14:48:57 by vintran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class		ShrubberyCreationForm : public Form
 		virtual ~ShrubberyCreationForm(void);
 		ShrubberyCreationForm &		operator=(ShrubberyCreationForm const & rhs);
 
-		virtual bool				execute(Bureaucrat const & executor) const;
+		bool				execute(Bureaucrat const & executor) const;
 };
 
 #endif

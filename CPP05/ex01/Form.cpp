@@ -6,7 +6,7 @@
 /*   By: vintran <vintran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 06:33:13 by vintran           #+#    #+#             */
-/*   Updated: 2022/03/03 14:23:54 by vintran          ###   ########.fr       */
+/*   Updated: 2022/03/05 16:02:39 by vintran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,10 @@ Form::Form(void) : _name("Undefined"), _signed(false), _signGrade(150), _execGra
 
 Form::Form(std::string const name, unsigned int signGrade, unsigned int execGrade) : _name(name), _signed(false), _signGrade(signGrade), _execGrade(execGrade)
 {
+	if (this->_signGrade < 1 || this->_execGrade < 1)
+		throw Form::GradeTooHighException();
+	if (this->_signGrade > 150 || this->_execGrade > 150)
+		throw Form::GradeTooLowException();
 	return ;
 }
 

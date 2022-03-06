@@ -12,7 +12,7 @@
 
 #include "Phonebook.hpp"
 
-Phonebook::Phonebook(void) : _n(0)
+Phonebook::Phonebook(void) : _n(0), _oldest(0)
 {
 	std::cout << std:: endl <<  "***************    PHONEBOOK    ***************" << std::endl;
 	return ;
@@ -20,7 +20,7 @@ Phonebook::Phonebook(void) : _n(0)
 
 Phonebook::~Phonebook(void)
 {
-	std::cout << std:: endl <<  "                  SEE YOU SOON :)" << std::endl;
+	std::cout << std:: endl <<  "                  ***************    PHONEBOOK EXITED    ***************" << std::endl;
 	return ;
 }
 
@@ -42,26 +42,13 @@ void	Phonebook::_display(void)
 void	Phonebook::add(void)
 {
 	std::string	input;
-	int			id = -1;
 
 	if (this->_n >= 8)
 	{
-		std::cout	<< "! Phonebook is full" << std::endl;
-		this->_display();
-		while (!std::cin.eof())
-		{
-			std::cout << std::endl << "Select a contact index you want to replace (leave empty to return menu): ";
-			std::getline(std::cin, input);
-			if (input.empty())
-			{
-				std::cout << "Back to main menu" << std::endl;
-				break ;
-			}
-			id = std::atoi(input.c_str());
-			if (id <= this->_n && id > 0)
-				return (this->_contacts[id - 1].add());
-			std::cout << "Invalid index" << std::endl;
-		}
+		if (this->_oldest >= 8)
+			this->_oldest = 0;
+		this->_contacts[this->_oldest].add();
+		this->_oldest++;
 		return ;
 	}
 	this->_contacts[_n].add();

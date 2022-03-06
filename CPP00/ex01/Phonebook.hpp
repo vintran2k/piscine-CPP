@@ -28,6 +28,7 @@ class	Phonebook
 	private :
 		Contact _contacts[8];
 		int		_n;
+		int		_oldest;
 		void	_display(void);
 };
 

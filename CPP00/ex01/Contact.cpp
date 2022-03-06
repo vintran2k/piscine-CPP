@@ -53,7 +53,7 @@ void	resize_and_print(std::string str)
 
 void	Contact::display1(int index)
 {
-	std::cout << std::setw(10) << index  << "|";
+	std::cout << std::setw(10) << index << "|";
 	resize_and_print(this->_infos[firstname]);
 	resize_and_print(this->_infos[lastname]);
 	resize_and_print(this->_infos[nickname]);

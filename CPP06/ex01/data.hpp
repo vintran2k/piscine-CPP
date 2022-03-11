@@ -6,7 +6,7 @@
 /*   By: vintran <vintran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/30 10:28:09 by vintran           #+#    #+#             */
-/*   Updated: 2022/01/30 10:29:24 by vintran          ###   ########.fr       */
+/*   Updated: 2022/03/09 15:44:20 by vintran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 
 typedef	struct
 {
-	int	value;
+	int	value1;
+	int	value2;
 }		Data;
 
 #endif

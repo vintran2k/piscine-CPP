@@ -22,7 +22,8 @@ int	main(void)
 				<< stringPTR << std::endl
 				<< &stringREF << std::endl;
 
-	std::cout	<< *stringPTR << std::endl
+	std::cout	<< string << std::endl
+				<< *stringPTR << std::endl
 				<< stringREF << std::endl;
 	return (0);
 }

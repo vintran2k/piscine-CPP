@@ -6,13 +6,13 @@
 #    By: vintran <vintran@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/05 13:56:33 by vintran           #+#    #+#              #
-#    Updated: 2022/01/30 16:33:41 by vintran          ###   ########.fr        #
+#    Updated: 2022/03/10 14:29:05 by vintran          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME			=	type
 SRCS			=	main.cpp
-CC				=	@clang++
+CC				=	@c++
 FLAGS			=	-Wall -Wextra -Werror -std=c++98
 OBJDIR			=	objs
 OBJS			=	$(addprefix $(OBJDIR)/, $(SRCS:.cpp=.o))

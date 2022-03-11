@@ -6,7 +6,7 @@
 /*   By: vintran <vintran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/30 06:19:35 by vintran           #+#    #+#             */
-/*   Updated: 2022/01/30 08:29:04 by vintran          ###   ########.fr       */
+/*   Updated: 2022/03/09 15:38:00 by vintran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,31 +52,21 @@ bool	is_float(std::string const &str)
 	size_t	p_pos = str.find('.');
 	size_t	p_rpos = str.rfind('.');
 	if (p_pos != p_rpos)
-	{
-		std::cerr << "err" << std::endl;
 		return (false);
-	}
-	if (p_pos == len)
-	{
-		std::cerr << "err" << std::endl;
+	if (p_pos == len - 1)
 		return (false);
-	}
 
 	size_t	f_position = str.find('f');
 	size_t	f_position_check = str.rfind('f');
+	if (f_position == std::string::npos)
+		return (false);
 	if (f_position != f_position_check)
-	{
-		std::cerr << "err" << std::endl;
 		return (false);
-	}
-	if (f_position != std::string::npos && f_position != len - 1)
-	{
-		std::cerr << "err" << std::endl;
+	if (f_position != len - 1)
 		return (false);
-	}
 
-	int	m_pos = str.find("-");
-	if (m_pos != 0 && str[0] == '-')
+	size_t	m_pos = str.find("-");
+	if (m_pos != std::string::npos && m_pos != 0)
 		return (false);
 
 	while (i < len - 1)
@@ -87,7 +77,7 @@ bool	is_float(std::string const &str)
 			return (false);
 		i++;
 	}
-	if (!isdigit(str[i]) && !(str[i] == 'f'))
+	if (!(str[i] == 'f'))
 		return (false);
 	return (true);
 }
@@ -104,18 +94,11 @@ bool	is_double(std::string const &str)
 	size_t	p_rpos = str.rfind('.');
 	if (p_pos != p_rpos)
 		return (false);
-	if (p_pos == len)
-		return (false);
-
-	size_t	f_position = str.find('f');
-	size_t	f_position_check = str.rfind('f');
-	if (f_position != f_position_check)
-		return (false);
-	if (f_position != std::string::npos && f_position != len - 1)
+	if (p_pos == len - 1)
 		return (false);
 
 	size_t	m_pos = str.find("-");
-	if (m_pos != 0 && str[0] == '-')
+	if (m_pos != std::string::npos && m_pos != 0)
 		return (false);
 
 	while (i < len - 1)
@@ -126,7 +109,7 @@ bool	is_double(std::string const &str)
 			return (false);
 		i++;
 	}
-	if (!isdigit(str[i]) && !(str[i] == 'f'))
+	if (!isdigit(str[i]) && !(str[i] == 'd'))
 		return (false);
 	return (true);
 }

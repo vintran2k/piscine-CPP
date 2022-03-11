@@ -6,7 +6,7 @@
 /*   By: vintran <vintran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/30 04:56:05 by vintran           #+#    #+#             */
-/*   Updated: 2022/01/30 08:28:27 by vintran          ###   ########.fr       */
+/*   Updated: 2022/03/09 15:14:59 by vintran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,7 +105,7 @@ void	Conversion::float_conv(void)
 void	Conversion::double_conv(void)
 {
 	double	d = strtod(this->_s.c_str(), NULL);
-	
+
 	if (this->_s == "nan" || this->_s == "+inf" || this->_s == "-inf")
 	{
 		std::cout << "char: impossible" << std::endl;

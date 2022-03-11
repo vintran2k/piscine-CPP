@@ -6,11 +6,11 @@
 #    By: vintran <vintran@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/05 13:56:33 by vintran           #+#    #+#              #
-#    Updated: 2022/01/30 07:53:09 by vintran          ###   ########.fr        #
+#    Updated: 2022/03/09 15:40:50 by vintran          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME			=	conversion
+NAME			=	convert
 SRCS			=	main.cpp		\
 					get_type.cpp	\
 					Conversion.cpp

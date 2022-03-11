@@ -6,7 +6,7 @@
 /*   By: vintran <vintran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/30 10:28:11 by vintran           #+#    #+#             */
-/*   Updated: 2022/01/30 10:42:39 by vintran          ###   ########.fr       */
+/*   Updated: 2022/03/09 15:45:04 by vintran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,14 +32,17 @@ int	main()
 	Data *      data = new Data;
 	uintptr_t   raw;
 
-	data->value = 42;
-	std::cout << data->value << std::endl;
+	data->value1 = 42;
+	data->value2 = 6;
+	std::cout << data->value1 << std::endl;
+	std::cout << data->value2 << std::endl;
 	std::cout << data << std::endl;
 	
 	raw = serialize(data);
 	data = deserialize(raw);
 
-	std::cout << data->value << std::endl;
+	std::cout << data->value1 << std::endl;
+	std::cout << data->value2 << std::endl;
 	std::cout << data << std::endl;
 
 	delete data;

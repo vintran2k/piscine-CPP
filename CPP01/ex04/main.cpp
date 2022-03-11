@@ -40,7 +40,10 @@ int	main(int ac, char **av)
 		return (error("Cannot open the request file"));
 	std::ofstream	replaceFile((filename + ".replace").c_str());
 	if (!replaceFile.is_open())
+	{
+		file.close();
 		return (error("Unable to create the replacement file"));
+	}
 
 	/***********************find and replace***********************/
 	std::string	line;

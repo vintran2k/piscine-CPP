@@ -25,7 +25,7 @@ HumanB::~HumanB(void)
 
 void	HumanB::attack(void) const
 {
-	std::cout << _name << " attacks with his ";
+	std::cout << _name << " attacks with their ";
 	if (_weapon)
 		std::cout << _weapon->getType() << std::endl;
 	else

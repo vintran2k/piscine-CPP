@@ -6,7 +6,7 @@
 /*   By: vintran <vintran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 05:45:21 by vintran           #+#    #+#             */
-/*   Updated: 2022/02/01 06:47:40 by vintran          ###   ########.fr       */
+/*   Updated: 2022/03/30 15:46:42 by vintran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,13 @@ class	Array
 			if (this != &rhs)
 			{
 				if (this->_size != 0 && this->_size != rhs._size && this->_array != NULL)
+				{
 					delete [] this->_array;
+					this->_array = new T[rhs._size];
+				}
+				else if (_array == NULL)
+					this->_array = new T[rhs._size];
 				this->_size = rhs._size;
-				this->_array = new T[this->_size];
 				for (unsigned int i = 0; i < this->_size; i++)
 					this->_array[i] = rhs._array[i];
 			}
